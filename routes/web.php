@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/api/yt/list', [YoutubeTimelineController::class, 'list']);
+Route::get('/twitter', function() {
+    return view('twitter');
+});
