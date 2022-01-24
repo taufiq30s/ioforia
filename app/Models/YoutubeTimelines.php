@@ -12,12 +12,14 @@ class YoutubeTimelines extends Model
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
+    public $timestamps = true;
 
     protected $fillable = [
         'id',
         'title',
-        'thumnailUrl',
+        'thumbnailUrl',
         'publishedAt',
-        'liveBroadcastContent'
+        'created_at',
+        'updated_at'
     ];
 }

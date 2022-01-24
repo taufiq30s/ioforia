@@ -3,6 +3,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Repositories\YoutubeTimelineRepository;
+use Illuminate\Support\Facades\DB;
 
 class EloquentYoutubeTimelineRepository implements YoutubeTimelineRepository {
   protected $youtubeTimelineModel = null;
@@ -12,8 +13,8 @@ class EloquentYoutubeTimelineRepository implements YoutubeTimelineRepository {
     $this->youtubeTimelineModel = $model;
   }
 
-  public function store(array $data) {
-    // TODO
+  public function create(array $data) {
+    return $this->youtubeTimelineModel->insert($data);
   }
 
   public function update(array $data) {

@@ -19,6 +19,7 @@ class CreateYoutubeTimelinesTable extends Migration
             $table->text('thumbnailUrl');
             $table->dateTime('publishedAt');
             $table->string('liveBroadcastContent');
+            $table->text('tags')->nullable();
             $table->timestamps();
         });
     }

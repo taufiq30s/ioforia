@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TwitterFeedController;
+use App\Http\Controllers\YoutubeTimelineController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/yt/update', [YoutubeTimelineController::class, 'update']);
+Route::get('/yt/list', [YoutubeTimelineController::class, 'list']);
+Route::get('/yt/test', [YoutubeTimelineController::class, 'test']);
+Route::get('/twitter/test/', [TwitterFeedController::class, 'tester']);
